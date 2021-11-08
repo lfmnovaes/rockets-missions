@@ -1,5 +1,5 @@
-const Missons =() => (
-    <div>Rockets</div>
-)
+const Missions = () => (
+  <h1>Missions</h1>
+);
 
-export default Missons;
+export default Missions;

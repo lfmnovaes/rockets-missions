@@ -1,19 +1,21 @@
-import {BrowserRouter as Router,Routes, Route} from 'react-router-dom';
-
-import  Rockets from './Rockets';
-import Missions from './Missions';
-import Profile from './Profile';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
-    <Router>
-      <div>
-    <Routes>
-    <Route  path="/" component={Rockets} exact />
-    <Route  path="/Missions" component={Missions} />
-    <Route  path="/Profile" component={Profile} />
-    </Routes>
-    </div>
-  </Router>
+  <nav>
+    <h1 className="navbar-brand">Space Traveler's Hub</h1>
+    <ul className="navbar-nav">
+      <li className="nav-item">
+        <NavLink to="/">Rockets</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink to="/missions">Missions</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink to="/profile">My Profile</NavLink>
+      </li>
+    </ul>
+  </nav>
 );
 
 export default Nav;
