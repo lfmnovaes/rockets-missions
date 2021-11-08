@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
   <nav>
-    <h1 className="navbar-brand">Space Traveler's Hub</h1>
+    <h1 className="navbar-brand">Space Traveler&apos;s Hub</h1>
     <ul className="navbar-nav">
       <li className="nav-item">
         <NavLink to="/">Rockets</NavLink>
