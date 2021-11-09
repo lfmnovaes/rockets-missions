@@ -10,6 +10,7 @@ import Nav from './components/Nav';
 import Rockets from './components/Rockets';
 import Missions from './components/MissionList';
 import Profile from './components/Profile';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const App = () => (
