@@ -1,3 +1,60 @@
-.App {
-  text-align: center;
+.rocket-row {
+  display: flex;
+  margin: 20px;
 }
+
+.rocket-row img {
+  width: 250px;
+  height: 200px;
+}
+
+.rocket-detail {
+  margin-left: 20px;
+}
+
+.rocket-detail h3 {
+  font-size: 24px;
+}
+
+.description {
+  display: flex;
+  align-items: baseline;
+}
+
+.description span {
+  font-size: 14px;
+  background-color: rgb(23, 242, 227);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.description p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.reserveButton {
+  background-color: rgb(23, 103, 242);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: white;
+  border: 1px solid ;
+  border-radius: 5px;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+

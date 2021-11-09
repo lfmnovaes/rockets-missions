@@ -1,26 +1,53 @@
-const ADD_ROCKET = 'spaceHub/rockets/ADD_ROCKET';
-const REMOVE_ROCKET = 'spaceHub/rockets/REMOVE_ROCKET';
+const ADD_RESERVE = 'spaceHub/rockets/ADD_RESERVE';
+const CANCEL_RESERVE = 'spaceHub/rockets/CANCEL_RESERVE';
 const GET_ROCKETS = 'spaceHub/rockets/GET_ROCKETS';
 
 const initialState = [];
 
-const reducer = (state = initialState, action) => {
+export const getRockets = () => (dispatch) => {
+  fetch('https://api.spacexdata.com/v3/rockets')
+    .then((res) => res.json())
+    .then((resResponse) => dispatch({
+      type: GET_ROCKETS,
+      payload: resResponse,
+    }));
+};
+
+export const AddReserve = (payload) => ({
+  type: ADD_RESERVE,
+  payload,
+});
+
+export const CancelReserve = (payload) => ({
+  type: CANCEL_RESERVE,
+  payload,
+});
+
+const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_ROCKET:
-      // postRocket(action.payload);
-      return [
-        ...state,
-        action.payload,
-      ];
-    case REMOVE_ROCKET:
-      // deleteRocket(action.payload);
-      // return state.filter((rocket) => rocket.id !== action.payload);
-      return state;
+    case ADD_RESERVE:
+      const newState = state.map(rocket => {
+        if(rocket.id !== action.payload) 
+            return rocket;
+        return { ...rocket, reserved: true };
+      });
+      return newState;
+    case CANCEL_RESERVE:
+      const newStateCancel = state.map(rocket => {
+        if(rocket.id !== action.payload) 
+            return rocket;
+        return { ...rocket, reserved: false };
+      });
+      return newStateCancel;
     case GET_ROCKETS:
-      return action.payload;
+      return  [
+        ...state,
+        ...action.payload,
+      ];
+    
     default:
       return state;
   }
 };
 
-export default reducer;
+export default rocketsReducer;
