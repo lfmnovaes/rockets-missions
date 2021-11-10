@@ -48,7 +48,7 @@
 
 .cancelButton {
   background-color: white;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 5px;
   padding: 10px 24px;
   text-align: center;
@@ -68,4 +68,3 @@
     flex-direction: column;
   }
 }
-

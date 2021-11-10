@@ -24,27 +24,25 @@ export const CancelReserve = (payload) => ({
 });
 
 const rocketsReducer = (state = initialState, action) => {
+  const newState = state.map((rocket) => {
+    if (rocket.id !== action.payload) return rocket;
+    return { ...rocket, reserved: true };
+  });
+  const newStateCancel = state.map((rocket) => {
+    if (rocket.id !== action.payload) return rocket;
+    return { ...rocket, reserved: false };
+  });
   switch (action.type) {
     case ADD_RESERVE:
-      const newState = state.map(rocket => {
-        if(rocket.id !== action.payload) 
-            return rocket;
-        return { ...rocket, reserved: true };
-      });
       return newState;
     case CANCEL_RESERVE:
-      const newStateCancel = state.map(rocket => {
-        if(rocket.id !== action.payload) 
-            return rocket;
-        return { ...rocket, reserved: false };
-      });
       return newStateCancel;
     case GET_ROCKETS:
-      return  [
+      return [
         ...state,
         ...action.payload,
       ];
-    
+
     default:
       return state;
   }

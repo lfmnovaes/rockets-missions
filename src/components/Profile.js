@@ -2,24 +2,20 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import '../App.css';
 
-
 const Profile = () => {
-
   const rocketlist = useSelector((data) => data.rocketsReducer);
 
-  const rocketItem = rocketlist.filter((item) => item.reserved).map((item) => {
-    return(
+  const rocketItem = rocketlist.filter((item) => item.reserved).map((item) => (
         <div className ="profile">
         <p>{item.rocket_name}</p>
         </div>
-    );
-  })
-  return(
+  ));
+  return (
     <div>
       <h3>My Rockets</h3>
-        {rocketItem} 
+        {rocketItem}
     </div>
   );
-}
+};
 
 export default Profile;
