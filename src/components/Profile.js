@@ -6,14 +6,14 @@ const Profile = () => {
   const rocketlist = useSelector((data) => data.rocketsReducer);
 
   const rocketItem = rocketlist.filter((item) => item.reserved).map((item) => (
-        <div className ="profile">
-        <p>{item.rocket_name}</p>
-        </div>
+    <div key={item.id} className="profile">
+      <p>{item.rocket_name}</p>
+    </div>
   ));
   return (
     <div>
       <h3>My Rockets</h3>
-        {rocketItem}
+      {rocketItem}
     </div>
   );
 };

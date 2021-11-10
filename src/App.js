@@ -5,10 +5,10 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Nav from './components/Nav.js';
-import Rockets from './components/Rockets.js';
-import Missions from './components/Missions.js';
-import Profile from './components/Profile.js';
+import Nav from './components/Nav';
+import Rockets from './components/Rockets';
+import Missions from './components/Missions';
+import Profile from './components/Profile';
 
 const App = () => (
   <div className="app">

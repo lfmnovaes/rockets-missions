@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets, AddReserve, CancelReserve } from '../Redux/Rockets/rockets.js';
+import { getRockets, AddReserve, CancelReserve } from '../Redux/Rockets/rockets';
 import '../App.css';
 
 const Rockets = () => {
@@ -22,28 +22,36 @@ const Rockets = () => {
   };
 
   const rocketItem = rocketlist.map((item) => (
-        <div className = "rocket-row">
-        <img src = {item.flickr_images[0]} alt = {item.rocket_name}/>
-        <div className ="rocket-detail">
+    <div key={item.id} className="rocket-row">
+      <img src={item.flickr_images[0]} alt={item.rocket_name} />
+      <div className="rocket-detail">
         <h3>{item.rocket_name}</h3>
-        <div className = "description">
-        {item.reserved ? (<span>Reserved</span>) : null}
-         <p>{item.description}</p>
+        <div className="description">
+          {item.reserved ? (<span>Reserved</span>) : null}
+          <p>{item.description}</p>
         </div>
         {item.reserved ? (
-            <button onClick = {() => CancelReserveHandler(item.id)} className = "cancelButton">Cancel Reservation</button>
+          <button type="submit" onClick={() => CancelReserveHandler(item.id)} className="cancelButton">Cancel Reservation</button>
         ) : (
-          <button onClick = {() => ReserveHandler(item.id)} className = "reserveButton">Reserve Rocket</button>
+          <button type="submit" onClick={() => ReserveHandler(item.id)} className="reserveButton">Reserve Rocket</button>
         )}
-
-        </div>
-        </div>
+      </div>
+    </div>
   ));
   return (
     <div>
-        {rocketItem}
+      {rocketItem}
     </div>
   );
 };
 
 export default Rockets;
+
+// Rockets.propTypes = {
+//   data: PropTypes.shape({
+//     flickr_images: PropTypes.string,
+//     rocket_name: PropTypes.string,
+//     description: PropTypes.string,
+//     id: PropTypes.string,
+//   }).isRequired,
+// };
