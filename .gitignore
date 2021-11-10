@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-.history
 .github
 
 
@@ -27,3 +26,4 @@ yarn-error.log*
 
 .stylelintrc.json
 .eslintrc.json
+.history
