@@ -21,7 +21,7 @@ const Missions = () => {
   );
 
   return (
-    <Table striped bordered hover>
+    <Table striped bordered hover size="sm">
       <thead>
         <tr>
           <th scope="col">Name</th>

@@ -17,20 +17,20 @@ export default function Mission({ data }) {
 
   return (
     <tr>
-      <th>
+      <th className="mission-name">
         {data.mission_name}
       </th>
-      <th>
+      <th className="mission-description">
         {data.description}
       </th>
-      <th>
+      <th className="align-middle">
         {data.reserved ? (
           <Badge bg="success">Active Member</Badge>
         ) : (
           <Badge bg="secondary">NOT A MEMBER</Badge>
         )}
       </th>
-      <th>
+      <th className="align-middle">
         {data.reserved ? (
           <Button variant="outline-danger" onClick={() => missionClick(data.mission_id, data.reserved)}>Leave Mission</Button>
         ) : (

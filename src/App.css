@@ -1,3 +1,12 @@
 .App {
   text-align: center;
 }
+
+.mission-name {
+  max-width: 10vw;
+}
+
+.mission-description {
+  font-size: 12px;
+  max-width: 60vw;
+}
