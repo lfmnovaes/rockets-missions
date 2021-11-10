@@ -13,7 +13,6 @@ export const getMissions = () => async (dispatch) => {
     .then((data) => {
       missions = data;
     });
-  console.log('missions', missions);
   dispatch({
     type: GET_MISSIONS,
     payload: missions,
