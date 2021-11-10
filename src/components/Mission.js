@@ -7,8 +7,8 @@ import { joinMission, leaveMission } from '../redux/missions/missions';
 export default function Mission({ data }) {
   const dispatch = useDispatch();
 
-  const missionClick = (id, status = false) => {
-    if (status === false) {
+  const missionClick = (id, reserved) => {
+    if (reserved === false) {
       dispatch(joinMission(id));
     } else {
       dispatch(leaveMission(id));
@@ -24,8 +24,10 @@ export default function Mission({ data }) {
         {data.description}
       </th>
       <th>
-        <Button onClick={() => missionClick(data.mission_id, data.status)} />
-        {data.status}
+        <Button onClick={() => missionClick(data.mission_id, data.reserved)}>
+          {data.reserved ? ('Leave\n') : ('Join\n')}
+          Mission
+        </Button>
       </th>
     </tr>
   );
@@ -36,6 +38,6 @@ Mission.propTypes = {
     mission_id: PropTypes.string,
     mission_name: PropTypes.string,
     description: PropTypes.string,
-    status: PropTypes.bool,
+    reserved: PropTypes.bool,
   }).isRequired,
 };

@@ -7,16 +7,23 @@ const API_URL = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
 
 export const getMissions = () => async (dispatch) => {
-  let missions = [];
   await fetch(API_URL)
     .then((response) => response.json())
     .then((data) => {
-      missions = data;
+      const missions = [];
+      data.forEach((el) => {
+        missions.push({
+          mission_id: el.mission_id,
+          mission_name: el.mission_name,
+          description: el.description,
+          reserved: false,
+        });
+      });
+      dispatch({
+        type: GET_MISSIONS,
+        payload: missions,
+      });
     });
-  dispatch({
-    type: GET_MISSIONS,
-    payload: missions,
-  });
 };
 
 export const joinMission = (payload) => ({
