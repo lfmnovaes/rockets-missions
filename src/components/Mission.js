@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Button, Badge } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { joinMission, leaveMission } from '../redux/missions/missions';
 
 export default function Mission({ data }) {
@@ -24,18 +24,10 @@ export default function Mission({ data }) {
         {data.description}
       </th>
       <th>
-        {data.reserved ? (
-          <Badge bg="success">Active Member</Badge>
-        ) : (
-          <Badge bg="secondary">NOT A MEMBER</Badge>
-        )}
-      </th>
-      <th>
-        {data.reserved ? (
-          <Button variant="outline-danger" onClick={() => missionClick(data.mission_id, data.reserved)}>Leave Mission</Button>
-        ) : (
-          <Button variant="outline-primary" onClick={() => missionClick(data.mission_id, data.reserved)}>Join Mission</Button>
-        )}
+        <Button onClick={() => missionClick(data.mission_id, data.reserved)}>
+          {data.reserved ? ('Leave\n') : ('Join\n')}
+          Mission
+        </Button>
       </th>
     </tr>
   );
