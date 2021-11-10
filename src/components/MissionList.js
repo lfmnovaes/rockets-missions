@@ -21,7 +21,7 @@ const Missions = () => {
   );
 
   return (
-    <Table className="mx-auto">
+    <Table striped bordered hover>
       <thead>
         <tr>
           <th scope="col">Name</th>
