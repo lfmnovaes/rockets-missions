@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group of Mission tests Test if Missions page is rendering correctly 1`] = `
+<table
+  className="table table-sm table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th
+        scope="col"
+      >
+        Name
+      </th>
+      <th
+        scope="col"
+      >
+        Description
+      </th>
+      <th
+        scope="col"
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;

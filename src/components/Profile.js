@@ -1,21 +1,22 @@
 import React from 'react';
+import { Container, ListGroup } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import '../App.css';
 
-const Profile = () => {
-  const rocketlist = useSelector((data) => data.rocketsReducer);
+export default function Profile() {
+  const missionsStore = useSelector((store) => store.missionsReducer);
+  const reservedMissions = missionsStore.filter((mission) => mission.reserved === true);
 
-  const rocketItem = rocketlist.filter((item) => item.reserved).map((item) => (
-    <div key={item.id} className="profile">
-      <p>{item.rocket_name}</p>
-    </div>
-  ));
   return (
-    <div>
-      <h3>My Rockets</h3>
-      {rocketItem}
-    </div>
+    <Container className="d-flex justify-content-evenly">
+      <ListGroup>
+        <h2>My Rockets</h2>
+      </ListGroup>
+      <ListGroup>
+        <h2>My missions</h2>
+        {reservedMissions.map((mission) => (
+          <ListGroup.Item key={mission.mission_id}>{mission.mission_name}</ListGroup.Item>
+        ))}
+      </ListGroup>
+    </Container>
   );
-};
-
-export default Profile;
+}

@@ -5,7 +5,7 @@ import {
   Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './redux/cofigureStore';
+import store from './redux/configureStore';
 import Nav from './components/Nav';
 import Rockets from './components/Rockets';
 import Missions from './components/MissionList';

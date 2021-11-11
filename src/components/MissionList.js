@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Table } from 'react-bootstrap';
 import { getMissions } from '../redux/missions/missions';
 import Mission from './Mission';
 
@@ -8,7 +9,9 @@ const Missions = () => {
   const missionsStore = useSelector((store) => store.missionsReducer);
 
   useEffect(() => {
-    dispatch(getMissions());
+    if (missionsStore.length === 0) {
+      dispatch(getMissions());
+    }
   }, []);
 
   const missionList = missionsStore.map(
@@ -18,18 +21,18 @@ const Missions = () => {
   );
 
   return (
-    <table className="table">
+    <Table striped bordered hover size="sm">
       <thead>
         <tr>
           <th scope="col">Name</th>
-          <th scope="col">ID</th>
           <th scope="col">Description</th>
+          <th scope="col">Status</th>
         </tr>
       </thead>
       <tbody>
         {missionList}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
