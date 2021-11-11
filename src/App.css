@@ -73,7 +73,7 @@
   max-width: 60vw;
 }
 
-.navbar:after {
+.navbar::after {
   content: "";
   background: lightgray;
   position: absolute;

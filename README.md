@@ -12,8 +12,6 @@ Web application for a company that provides commercial and scientific space trav
 
 [Heroku Live Demo](https://space-hub-lfmn.herokuapp.com/)
 
-[Netlify Live Demo](https://bookstore-lfmn.netlify.app/)
-
 ## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
