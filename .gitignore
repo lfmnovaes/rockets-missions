@@ -24,4 +24,3 @@ yarn-error.log*
 
 .stylelintrc.json
 .eslintrc.json
-.babelrc
