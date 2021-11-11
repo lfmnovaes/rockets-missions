@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { Navbar, Container } from 'react-bootstrap';
 import logo from '../imgs/planet.png';
 
-// className="navbar navbar-expand-lg navbar-light bg-light"
-
 const Nav = () => (
   <Navbar expand="lg" bg="light">
     <Container fluid>
