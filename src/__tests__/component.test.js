@@ -5,7 +5,7 @@ import store from '../redux/cofigureStore';
 
 import '@testing-library/jest-dom';
 import Rockets from '../components/Rockets';
-import Profile from '../components/Profile'
+import Profile from '../components/Profile';
 
 test('renders Rockets component correctly', () => {
   const rockets = renderer
@@ -26,4 +26,3 @@ test('renders Profile Rockets correctly', () => {
     .toJSON();
   expect(rockets).toMatchSnapshot();
 });
-
