@@ -39,7 +39,7 @@ const Rockets = () => {
     </div>
   ));
   return (
-    <div>
+    <div className = "rockets-list">
       {rocketItem}
     </div>
   );
