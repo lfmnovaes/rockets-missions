@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group of tests for Missions page Test if Missions page is rendering correctly 1`] = `
+<table
+  className="table table-sm table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th
+        scope="col"
+      >
+        Name
+      </th>
+      <th
+        scope="col"
+      >
+        Description
+      </th>
+      <th
+        scope="col"
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
+
+exports[`Group of tests for Profile page Test if Profile page is rendering correctly 1`] = `
+<div
+  className="d-flex justify-content-evenly container"
+>
+  <div
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <h2>
+      My Rockets
+    </h2>
+  </div>
+  <div
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <h2>
+      My missions
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Group of tests for Rockets page renders Profile Rockets correctly 1`] = `
+<div
+  className="d-flex justify-content-evenly container"
+>
+  <div
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <h2>
+      My Rockets
+    </h2>
+  </div>
+  <div
+    className="list-group"
+    onKeyDown={[Function]}
+  >
+    <h2>
+      My missions
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Group of tests for Rockets page renders Rockets component correctly 1`] = `
+<div
+  className="rockets-list"
+/>
+`;
+
+exports[`Test Nav renderisation Nav 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-light bg-light"
+>
+  <div
+    className="container-fluid"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <img
+        alt="Space Travelers logo"
+        className="d-inline-block align-top"
+        height="40"
+        src="planet.png"
+        width="40"
+      />
+       
+      Space Travelers' Hub
+    </span>
+    <ul
+      className="navbar-nav"
+    >
+      <li
+        className="nav-item"
+      >
+        <a
+          aria-current="page"
+          className="nav-link active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="divider-vertical"
+      />
+      <li
+        className="nav-item profile"
+      >
+        <a
+          className="nav-link"
+          href="/profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

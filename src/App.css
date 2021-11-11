@@ -58,11 +58,6 @@
   cursor: pointer;
 }
 
-.profile {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
 @media only screen and (max-width: 600px) {
   .rocket-row {
     flex-direction: column;
@@ -76,4 +71,37 @@
 .mission-description {
   font-size: 12px;
   max-width: 60vw;
+}
+
+.navbar::after {
+  content: "";
+  background: lightgray;
+  position: absolute;
+  left: 2.5%;
+  bottom: 0;
+  height: 1px;
+  width: 95%;
+}
+
+.divider-vertical {
+  align-self: center;
+  height: 15px;
+  border-left: 2px solid gray;
+}
+
+ul > li {
+  margin-right: 10px;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+
+.active {
+  text-decoration: underline !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #007bff !important;
 }
