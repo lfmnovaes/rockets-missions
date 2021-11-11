@@ -15,7 +15,7 @@ const Nav = () => (
           className="d-inline-block align-top"
         />
         {' '}
-        Space Traveler&apos;s Hub
+        Space Travelers&apos; Hub
       </Navbar.Brand>
       <ul className="navbar-nav">
         <li className="nav-item">
@@ -24,7 +24,8 @@ const Nav = () => (
         <li className="nav-item">
           <NavLink to="/missions" className="nav-link">Missions</NavLink>
         </li>
-        <li className="nav-item">
+        <li className="divider-vertical" />
+        <li className="nav-item profile">
           <NavLink to="/profile" className="nav-link">My Profile</NavLink>
         </li>
       </ul>

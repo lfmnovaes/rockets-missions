@@ -97,7 +97,7 @@ exports[`Test Nav renderisation Nav 1`] = `
         width="40"
       />
        
-      Space Traveler's Hub
+      Space Travelers' Hub
     </span>
     <ul
       className="navbar-nav"
@@ -126,7 +126,10 @@ exports[`Test Nav renderisation Nav 1`] = `
         </a>
       </li>
       <li
-        className="nav-item"
+        className="divider-vertical"
+      />
+      <li
+        className="nav-item profile"
       >
         <a
           className="nav-link"

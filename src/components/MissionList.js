@@ -12,7 +12,7 @@ const Missions = () => {
     if (missionsStore.length === 0) {
       dispatch(getMissions());
     }
-  }, []);
+  }, [dispatch(getMissions)]);
 
   const missionList = missionsStore.map(
     (mission) => (
