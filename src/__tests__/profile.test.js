@@ -6,13 +6,13 @@ import Profile from '../components/Profile';
 
 describe('Group of Profile tests', () => {
   test('Test if Profile page is rendering correctly', () => {
-    const missions = renderer
+    const profile = renderer
       .create(
         <Provider store={store}>
           <Profile />
         </Provider>,
       )
       .toJSON();
-    expect(missions).toMatchSnapshot();
+    expect(profile).toMatchSnapshot();
   });
 });
