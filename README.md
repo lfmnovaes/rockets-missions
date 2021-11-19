@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Flfmnovaes%2Frockets-missions&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 # Space Travelers' Hub Project
 
 Web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
