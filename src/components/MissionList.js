@@ -14,11 +14,9 @@ const Missions = () => {
     }
   }, []);
 
-  const missionList = missionsStore.map(
-    (mission) => (
-      <Mission key={mission.mission_id} data={mission} />
-    ),
-  );
+  const missionList = missionsStore.map((mission) => (
+    <Mission key={mission.mission_id} data={mission} />
+  ));
 
   return (
     <Table striped bordered hover size="sm">
@@ -29,9 +27,7 @@ const Missions = () => {
           <th scope="col">Status</th>
         </tr>
       </thead>
-      <tbody>
-        {missionList}
-      </tbody>
+      <tbody>{missionList}</tbody>
     </Table>
   );
 };

@@ -7,10 +7,12 @@ const initialState = [];
 export const getRockets = () => (dispatch) => {
   fetch('https://api.spacexdata.com/v3/rockets')
     .then((res) => res.json())
-    .then((resResponse) => dispatch({
-      type: GET_ROCKETS,
-      payload: resResponse,
-    }));
+    .then((resResponse) =>
+      dispatch({
+        type: GET_ROCKETS,
+        payload: resResponse,
+      })
+    );
 };
 
 export const AddReserve = (payload) => ({
@@ -38,10 +40,7 @@ const rocketsReducer = (state = initialState, action) => {
     case CANCEL_RESERVE:
       return newStateCancel;
     case GET_ROCKETS:
-      return [
-        ...state,
-        ...action.payload,
-      ];
+      return [...state, ...action.payload];
 
     default:
       return state;

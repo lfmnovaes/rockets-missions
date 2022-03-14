@@ -14,18 +14,30 @@ import Nav from '../components/Nav';
 describe('Group of tests for Rockets page', () => {
   test('renders Rockets component correctly', () => {
     const rockets = renderer
-      .create(<Provider store={store}><Rockets /></Provider>)
+      .create(
+        <Provider store={store}>
+          <Rockets />
+        </Provider>
+      )
       .toJSON();
     expect(rockets).toMatchSnapshot();
   });
   test('List is created', () => {
-    const { container } = render(<Provider store={store}><Rockets /></Provider>);
+    const { container } = render(
+      <Provider store={store}>
+        <Rockets />
+      </Provider>
+    );
     const list = container.querySelector('.rockets-list');
     expect(list).toBeInTheDocument();
   });
   test('renders Profile Rockets correctly', () => {
     const rockets = renderer
-      .create(<Provider store={store}><Profile /></Provider>)
+      .create(
+        <Provider store={store}>
+          <Profile />
+        </Provider>
+      )
       .toJSON();
     expect(rockets).toMatchSnapshot();
   });
@@ -37,7 +49,7 @@ describe('Group of tests for Missions page', () => {
       .create(
         <Provider store={store}>
           <Missions />
-        </Provider>,
+        </Provider>
       )
       .toJSON();
     expect(missions).toMatchSnapshot();
@@ -53,7 +65,7 @@ describe('Group of tests for Profile page', () => {
       .create(
         <Provider store={store}>
           <Profile />
-        </Provider>,
+        </Provider>
       )
       .toJSON();
     expect(profile).toMatchSnapshot();
@@ -63,7 +75,11 @@ describe('Group of tests for Profile page', () => {
 describe('Test Nav renderisation', () => {
   test('Nav', () => {
     const nav = renderer
-      .create(<BrowserRouter><Nav /></BrowserRouter>)
+      .create(
+        <BrowserRouter>
+          <Nav />
+        </BrowserRouter>
+      )
       .toJSON();
     expect(nav).toMatchSnapshot();
   });

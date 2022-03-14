@@ -4,7 +4,7 @@ import { Navbar, Container } from 'react-bootstrap';
 import logo from '../imgs/planet.png';
 
 const Nav = () => (
-  <Navbar expand="lg" bg="light">
+  <Navbar expand="sm" bg="light">
     <Container fluid>
       <Navbar.Brand>
         <img
@@ -13,20 +13,25 @@ const Nav = () => (
           width="40"
           height="40"
           className="d-inline-block align-top"
-        />
-        {' '}
+        />{' '}
         Space Travelers&apos; Hub
       </Navbar.Brand>
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink to="/" className="nav-link">Rockets</NavLink>
+          <NavLink to="/" className="nav-link">
+            Rockets
+          </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/missions" className="nav-link">Missions</NavLink>
+          <NavLink to="/missions" className="nav-link">
+            Missions
+          </NavLink>
         </li>
         <li className="divider-vertical" />
         <li className="nav-item profile">
-          <NavLink to="/profile" className="nav-link">My Profile</NavLink>
+          <NavLink to="/profile" className="nav-link">
+            My Profile
+          </NavLink>
         </li>
       </ul>
     </Container>

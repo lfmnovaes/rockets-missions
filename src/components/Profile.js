@@ -4,10 +4,14 @@ import { useSelector } from 'react-redux';
 
 export default function Profile() {
   const missionsStore = useSelector((store) => store.missionsReducer);
-  const reservedMissions = missionsStore.filter((mission) => mission.reserved === true);
+  const reservedMissions = missionsStore.filter(
+    (mission) => mission.reserved === true
+  );
 
   const rocketsStore = useSelector((store) => store.rocketsReducer);
-  const reservedRockets = rocketsStore.filter((rocket) => rocket.reserved === true);
+  const reservedRockets = rocketsStore.filter(
+    (rocket) => rocket.reserved === true
+  );
 
   return (
     <Container className="d-flex justify-content-evenly">
@@ -20,7 +24,9 @@ export default function Profile() {
       <ListGroup>
         <h2>My missions</h2>
         {reservedMissions.map((mission) => (
-          <ListGroup.Item key={mission.mission_id}>{mission.mission_name}</ListGroup.Item>
+          <ListGroup.Item key={mission.mission_id}>
+            {mission.mission_name}
+          </ListGroup.Item>
         ))}
       </ListGroup>
     </Container>

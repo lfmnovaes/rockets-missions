@@ -2,17 +2,23 @@
 
 # Space Travelers' Hub Project
 
-Web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
-
-## Built With
-
--  React, CSS, JavaScript
--  Visual Studio Code: A source code editor
--  Git: A tool for managing source code
+Pair programming project that uses React and Redux to fetch [rockets](https://api.spacexdata.com/v3/rockets) and [missions](https://api.spacexdata.com/v3/missions) data from SpaceX API.
 
 ## Live Demo
 
 [Heroku Live Demo](https://space-hub-lfmn.herokuapp.com/)
+
+## Preview
+
+![preview](./rocketmissions.gif)
+
+## Built With
+
+* [NodeJS](https://nodejs.org/en/)
+* [ReactJS](https://reactjs.org/)
+* [React Redux](https://react-redux.js.org/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [JestJS](https://jestjs.io/)
 
 ## Getting Started
 

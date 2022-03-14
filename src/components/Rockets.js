@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets, AddReserve, CancelReserve } from '../redux/rockets/rockets';
+import {
+  getRockets,
+  AddReserve,
+  CancelReserve,
+} from '../redux/rockets/rockets';
 import '../App.css';
 
 const Rockets = () => {
@@ -27,22 +31,30 @@ const Rockets = () => {
       <div className="rocket-detail">
         <h3>{item.rocket_name}</h3>
         <div className="description">
-          {item.reserved ? (<span>Reserved</span>) : null}
+          {item.reserved ? <span>Reserved</span> : null}
           <p>{item.description}</p>
         </div>
         {item.reserved ? (
-          <button type="submit" onClick={() => CancelReserveHandler(item.id)} className="cancelButton">Cancel Reservation</button>
+          <button
+            type="submit"
+            onClick={() => CancelReserveHandler(item.id)}
+            className="cancelButton"
+          >
+            Cancel Reservation
+          </button>
         ) : (
-          <button type="submit" onClick={() => ReserveHandler(item.id)} className="reserveButton">Reserve Rocket</button>
+          <button
+            type="submit"
+            onClick={() => ReserveHandler(item.id)}
+            className="reserveButton"
+          >
+            Reserve Rocket
+          </button>
         )}
       </div>
     </div>
   ));
-  return (
-    <div className="rockets-list">
-      {rocketItem}
-    </div>
-  );
+  return <div className="rockets-list">{rocketItem}</div>;
 };
 
 export default Rockets;
