@@ -12,7 +12,7 @@ const Missions = () => {
     if (missionsStore.length === 0) {
       dispatch(getMissions());
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const missionList = missionsStore.map((mission) => (
     <Mission key={mission.mission_id} data={mission} />

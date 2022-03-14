@@ -9,13 +9,13 @@ import '../App.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-
-  const rocketlist = useSelector((data) => data.rocketsReducer);
+  const rocketList = useSelector((data) => data.rocketsReducer);
+  
   useEffect(() => {
-    if (rocketlist.length === 0) {
+    if (rocketList.length === 0) {
       dispatch(getRockets());
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const ReserveHandler = (id) => {
     dispatch(AddReserve(id));
@@ -25,7 +25,7 @@ const Rockets = () => {
     dispatch(CancelReserve(id));
   };
 
-  const rocketItem = rocketlist.map((item) => (
+  const rocketItem = rocketList.map((item) => (
     <div key={item.id} className="rocket-row">
       <img src={item.flickr_images[0]} alt={item.rocket_name} />
       <div className="rocket-detail">
