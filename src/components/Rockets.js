@@ -10,7 +10,7 @@ import '../App.css';
 const Rockets = () => {
   const dispatch = useDispatch();
   const rocketList = useSelector((data) => data.rocketsReducer);
-  
+
   useEffect(() => {
     if (rocketList.length === 0) {
       dispatch(getRockets());

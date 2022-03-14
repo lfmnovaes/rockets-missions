@@ -6,7 +6,7 @@ Pair programming project that uses React and Redux to fetch [rockets](https://ap
 
 ## Live Demo
 
-[Heroku Live Demo](https://space-hub-lfmn.herokuapp.com/)
+[Netlify Live Demo](https://rockets-missions-lfmn.netlify.app/)
 
 ## Preview
 
